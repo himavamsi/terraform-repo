@@ -7,6 +7,11 @@ terraform {
       version = ">= 5.0.0"
     }
   }
+
+  backend "gcs" {
+    bucket  = "mlops-new-485205-terraform-state"
+    prefix  = "vm-provisioning"
+  }
 }
 
 provider "google" {
